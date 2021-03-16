@@ -7,6 +7,7 @@ class Navbar extends React.Component{
       <div>
         <nav>
         <a><img src="../../public/logo192.png" alt="logo"/></a>
+        <InputText value={Pesquise aqui} />
 
         </nav>
       </div>
