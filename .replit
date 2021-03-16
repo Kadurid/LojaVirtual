@@ -1,0 +1,6 @@
+language = "nodejs"
+#para a etapa avaliativa 1
+run = "yarn && yarn start"
+
+#para a etapa avaliativa 2
+#run = "yarn start"
