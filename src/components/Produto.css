@@ -1,0 +1,19 @@
+#container-produto{
+    margin: 40px auto;
+}
+.produto{
+    margin-bottom: 40px;
+}
+.produto-item{
+    padding: 25px 40px;
+}
+
+.produto-item figure img{
+    max-width: 100%;
+}
+.produto-item .descricao{
+    text-align: justify;
+}
+.produto-item .descricao header{
+    font-weight: bold;
+}
