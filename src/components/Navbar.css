@@ -5,3 +5,7 @@ nav{
 button{
   --primary-color: #007BBF;
 }
+
+#logo {
+  max-width: 50px;
+}

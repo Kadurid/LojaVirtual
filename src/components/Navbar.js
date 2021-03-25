@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import './Navbar.css';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
-import { Router, Route, Link} from 'react-router';
+import { Router, Route, Link} from 'react-router-dom';
 
 class Navbar extends React.Component{
   render(){
@@ -13,7 +13,7 @@ class Navbar extends React.Component{
                     <span className="navbar-toggler-icon"></span>
                 </Button>
                 <a className="navbar-brand" href="#">
-                    <img src="https://replit.com/@Kadurid/LojaVirtual#public/logo192.png" className="App-logo" alt="logo"/>
+                    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/BnL_logo.svg/375px-BnL_logo.svg.png" className="App-logo" alt="logo"/>
                 </a>
                 <span className="p-float-label">
                     <InputText id="in"/>
@@ -22,14 +22,19 @@ class Navbar extends React.Component{
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" href="#">Produtos</a>
+                        <Link to="/" className="nav-link active">
+                        Produtos
+                        </Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Meu carrinho</a>
+                        <Link to="/carrinho" className="nav-link active">
+                        Meu carrinho
+                        </Link>
                         </li>
                         <li className="nav-item">
-                          <a className="nav-link active" >Meu perfil</a>
-
+                        <Link to="/perfil" className="nav-link active">
+                        Meu perfil
+                        </Link>
                         </li>
                     </ul>
                 </div>

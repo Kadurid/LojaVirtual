@@ -5,7 +5,13 @@ import './Produto.css';
 class Produto extends React.Component{
   constructor(){
     super();
+    this.handleComprar = this.handleComprar.bind(this);
   }  
+
+  handleComprar(id){
+    
+  }
+
   render(){
     return(
     <div id="container-produto" className="col-md-10">
@@ -22,7 +28,8 @@ class Produto extends React.Component{
                     <section><b>Disponível:</b>{data.qtdEstoque}</section>
                     <footer className="">
                         <b>Valor:R${data.valor}<br/><br/></b>
-                        <div className="text-center"><a className="btn btn-primary">Comprar</a></div>
+                        <div className="text-center"><a className="btn btn-primary" onClick={this.handleComprar(data.id)}>Comprar</a>
+                        </div>
                     </footer>
                 </div>
             </div>
