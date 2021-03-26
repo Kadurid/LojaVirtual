@@ -1,15 +1,25 @@
 import React,{useState} from "react";
 import {produtos} from './../data/produtos.json'
+import {carrinho} from './../data/carrinho.json'
+import './style.css';
 import './Produto.css';
 
 class Produto extends React.Component{
+
   constructor(){
     super();
+    var shoppingCart = [];
     this.handleComprar = this.handleComprar.bind(this);
+    this.shoppingCart = shoppingCart;
   }  
-
-  handleComprar(id){
-    
+ 
+  //const  shoppingCart = [];
+  handleComprar(data){
+        let produto = [data.id, data.descricao, data.valor];
+        this.shoppingCart.push(produto);
+        carrinho.push(data);
+        var item = JSON.stringify(carrinho);
+        alert('Adicionado ao carrinho');
   }
 
   render(){
@@ -28,13 +38,12 @@ class Produto extends React.Component{
                     <section><b>Disponível:</b>{data.qtdEstoque}</section>
                     <footer className="">
                         <b>Valor:R${data.valor}<br/><br/></b>
-                        <div className="text-center"><a className="btn btn-primary" onClick={this.handleComprar(data.id)}>Comprar</a>
+                        <div className="text-center" ><button className="btn btn-primary" onClick={() => { this.handleComprar(data);}}>Comprar</button>
                         </div>
                     </footer>
                 </div>
             </div>
           </div>
-          
         );
       })}
       </div>

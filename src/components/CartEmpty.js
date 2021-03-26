@@ -4,19 +4,17 @@ import Rodape from "./Rodape.js";
 import CartList from "./CartList.js";
 import {carrinho} from './../data/carrinho.json';
 
-class Carrinho extends React.Component{
+class CartEmpty extends React.Component{
   constructor(){
     super();
   }
   render(){
     return(
       <div>
-        <Navbar />
-        <CartList />
-        <Rodape />
+        <p>Aproveite nossos melhores preços, se esbanje de comprar tudo que pode comprar.</p>
       </div>
     );
   }
 }
 
-export default Carrinho;
+export default CartEmpty;

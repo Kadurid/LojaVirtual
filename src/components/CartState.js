@@ -2,21 +2,22 @@ import React,{useState} from "react";
 import Navbar from "./Navbar.js";
 import Rodape from "./Rodape.js";
 import CartList from "./CartList.js";
+import CartEmpty from './CartEmpty.js';
 import {carrinho} from './../data/carrinho.json';
 
-class Carrinho extends React.Component{
+
+class CartState extends React.Component{
   constructor(){
     super();
   }
   render(){
-    return(
-      <div>
-        <Navbar />
-        <CartList />
-        <Rodape />
-      </div>
-    );
+    if(carrinho.length == 0){
+      return <CartEmpty />
+    }
+    else{
+      return <CartList />
+    }
   }
 }
 
-export default Carrinho;
+export default CartState;
